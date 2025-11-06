@@ -7,13 +7,13 @@ A data warehousing project developed as part of the Data Warehousing & Integrati
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-12%2B-blue.svg)](https://www.postgresql.org/)
 [![Talend](https://img.shields.io/badge/Talend-7.3%2B-orange.svg)](https://www.talend.com/)
 
-## 📋 Overview
+##  Overview
 
 This project demonstrates the end-to-end process of **converting an OLTP (Online Transaction Processing) system to an OLAP (Online Analytical Processing) data warehouse** for payroll management. The transformation enables complex analytical queries and business intelligence reporting while maintaining operational data integrity.
 
 **Key Achievement:** **40% improvement in query performance** by converting normalized OLTP schema to optimized Starflake dimensional model with Talend ETL pipeline.
 
-## 💡 Problem Statement
+##  Problem Statement
 
 Organizations need to analyze payroll data for strategic decision-making, but transactional OLTP systems are optimized for operations, not analytics. Running complex analytical queries on OLTP systems leads to:
 
@@ -24,7 +24,7 @@ Organizations need to analyze payroll data for strategic decision-making, but tr
 
 **Solution:** Build a separate OLAP data warehouse optimized for analytical workloads, populated through an ETL pipeline that transforms OLTP data into a dimensional model.
 
-## 🏗️ Architecture
+##  Architecture
 
 ### Three-Stage Data Pipeline
 ```
@@ -50,7 +50,7 @@ Organizations need to analyze payroll data for strategic decision-making, but tr
 | **Performance** | Optimized for writes | Optimized for reads |
 | **Joins** | Many small tables with 5-10 joins | Pre-joined fact table with dimensions |
 
-## 🔄 OLTP to OLAP Transformation
+##  OLTP to OLAP Transformation
 
 ### OLTP Schema (Before)
 - **15 normalized tables** in 3NF
@@ -68,7 +68,7 @@ Organizations need to analyze payroll data for strategic decision-making, but tr
 - **7 Dimension Tables**: Employee, Department, Division, Designation, Date, Overtime, Deductions
 - **Hierarchies**: Organizational, Temporal, Geographic, Job Level
 
-## 💻 Technologies Used
+##  Technologies Used
 
 | Technology | Version | Purpose |
 |------------|---------|---------|
@@ -77,7 +77,7 @@ Organizations need to analyze payroll data for strategic decision-making, but tr
 | SQL | - | Schema definition and queries |
 
 
-## 📊 Data Model
+##  Data Model
 
 ### Conceptual Data Warehouse Model
 <img width="499" height="510" alt="image" src="https://github.com/user-attachments/assets/9c75cd35-4b5f-4105-b3ec-b918a0557d61" />
@@ -99,7 +99,7 @@ Organizations need to analyze payroll data for strategic decision-making, but tr
 - **Geographic**: City → State → Country
 - **Job**: Employee → Designation → Pay Grade
 
-## 📈 OLAP Operations Supported
+##  OLAP Operations Supported
 
 1. **Roll-Up** - Aggregate to higher levels (Employee → Department → Division)
 2. **Drill-Down** - Decompose to lower levels (Year → Quarter → Month)
@@ -107,7 +107,7 @@ Organizations need to analyze payroll data for strategic decision-making, but tr
 4. **Dice** - Filter by multiple dimensions
 5. **Pivot** - Rotate data perspectives
 
-## ⚡ Performance Results
+##  Performance Results
 
 ### Query Performance Comparison
 
@@ -130,7 +130,7 @@ Organizations need to analyze payroll data for strategic decision-making, but tr
 **Institution:** Northeastern University, College of Engineering  
 **Term:** Fall 2024
 
-## 📄 License
+##  License
 
 This project is part of academic coursework at Northeastern University.
 
